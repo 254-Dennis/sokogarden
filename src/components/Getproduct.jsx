@@ -45,7 +45,7 @@ const Getproduct = () => {
               {/* product cost goes here  */}
               <b className='text-success'>{singleproduct.product_cost}</b><br />
               {/* purchase now button  */}
-              <button className=' btn btn-primary w-100' onClick={()=>navigate("/makepayment")}>purchase now</button>
+              <button className=' btn btn-primary w-100' onClick={()=>navigate("/makepayment",{state:{singleproduct}})}>purchase now</button>
             </div>
 
           </div>
