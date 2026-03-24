@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Signup from './components/Signup';
 import Signin from './components/Signin';
@@ -13,14 +15,14 @@ function App() {
     <BrowserRouter>
 
       <div className="App">
-        <header className="App-header">
-          <h1>Welcome to sokogarden</h1>
+        <header className="App-header indie-flower-regular">
+          <h1>Welcome to electronic shop</h1>
         </header>
         <nav>
-          <Link to="/signup" className='btn btn-primary m-2'>Signup</Link>
-          <Link to="/signin" className='btn btn-info m-2'>Signin</Link>
-          <Link to="/addproduct" className='btn btn-danger m-2'>addproduct</Link>
-          <Link to="/" className='btn btn-secondary m-2'>getproduct</Link>
+          <Link to="/signup" className='btn btn-primary m-2 indie-flower-regular'>Sign up</Link>
+          <Link to="/signin" className='btn btn-primary m-2 indie-flower-regular'>Sign in</Link>
+          <Link to="/addproduct" className='btn btn-info m-2 indie-flower-regular'>add product</Link>
+          <Link to="/" className='btn btn-info m-2 indie-flower-regular'>get product</Link>
           
 
         </nav>
