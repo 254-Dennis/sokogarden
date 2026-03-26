@@ -32,6 +32,7 @@ const Addproduct = () => {
     }
     }
   return (
+    <div className='full-height'>
     <div className='row justify-content-center mt-2'>
         <div className='col-md-8 card shadow p-4 bg-info'>
             <h1 className='text-dark'>Add products</h1>
@@ -51,6 +52,7 @@ const Addproduct = () => {
             </form>
         </div>
 
+    </div>
     </div>
   )
 }

@@ -34,6 +34,8 @@ const Signup = () => {
       }
     }
   return (
+    <div className='full-height'>
+
     <div className="row mt-2 justify-content-center ">
         <div className='col-md-6  card shadow bg-secondary'>
             <h1>Sign up 👤</h1>
@@ -52,6 +54,7 @@ const Signup = () => {
             </form>
         </div>
         
+    </div>
     </div>
   )
 }
