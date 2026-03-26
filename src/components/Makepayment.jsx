@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 import React, { useState } from 'react'
-import { useLocation, useSearchParams } from 'react-router-dom'
+import { useLocation} from 'react-router-dom'
 const Makepayment = () => {
     const{singleproduct}=useLocation().state||{}
     const imagepath="http://denniskifaru.alwaysdata.net/static/images/"
@@ -24,7 +24,7 @@ const Makepayment = () => {
         setLoading("")
       } catch (error) {
         setError(error.message)
-        setLoading("")
+        setLoading("");
       }
     }
   return (

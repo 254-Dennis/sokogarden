@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,10 +19,10 @@ function App() {
           <h1>Welcome to electronic shop</h1>
         </header>
         <nav>
-          <Link to="/signup" className='btn btn-primary m-2 indie-flower-regular'>Sign up</Link>
-          <Link to="/signin" className='btn btn-primary m-2 indie-flower-regular'>Sign in</Link>
-          <Link to="/addproduct" className='btn btn-info m-2 indie-flower-regular'>add product</Link>
-          <Link to="/" className='btn btn-info m-2 indie-flower-regular'>get product</Link>
+          <Link to="/signup" className='btn btn-primary m-2 indie-flower-regular'>🙋‍♂️Sign up</Link>
+          <Link to="/signin" className='btn btn-primary m-2 indie-flower-regular'>🙎Sign in</Link>
+          <Link to="/addproduct" className='btn btn-info m-2 indie-flower-regular'>🖥️add product</Link>
+          <Link to="/" className='btn btn-info m-2 indie-flower-regular'>💻get product</Link>
           
 
         </nav>

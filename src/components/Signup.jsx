@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React,{useState, useStates}from 'react'
+import React,{useState}from 'react'
 import { Link } from 'react-router-dom'
 
 const Signup = () => {
@@ -28,23 +28,25 @@ const Signup = () => {
         setSuccess(response.data.massage)
         setLoading("")
       } catch (error) {
+        setError(error.message)
+        setLoading("");
         
       }
     }
   return (
     <div className="row mt-2 justify-content-center ">
         <div className='col-md-6  card shadow bg-secondary'>
-            <h1>Sign up</h1>
+            <h1>Sign up 👤</h1>
             {/* bind the states  */}
             <h2 className='text-info'>{loading}</h2>
             <h2 className='text-success'>{success}</h2>
             <h2 className='text-danger'>{error}</h2>
 
             <form action=""  onSubmit={handlesubmit}>
-                <input type='text' placeholder='Enter Username' className='form-control indie-flower-regular' onChange={(e)=>setUsername(e.target.value)}/><br />
-                <input type='email' placeholder='Enter Email' className='form-control indie-flower-regular' onChange={(e)=>setEmail(e.target.value)}/><br />
-                <input type='password'placeholder='Enter Password' className='form-control indie-flower-regular' onChange={(e)=>setPassword(e.target.value)}/><br />
-                <input type='phone'placeholder='Enter Phone Number'className='form-control indie-flower-regular' onChange={(e)=>setPhone(e.target.value)}/><br />
+                <input type='text' placeholder='👤Enter Username' className='form-control indie-flower-regular' onChange={(e)=>setUsername(e.target.value)}/><br />
+                <input type='email' placeholder='📧Enter Email' className='form-control indie-flower-regular' onChange={(e)=>setEmail(e.target.value)}/><br />
+                <input type='password'placeholder='🔒Enter Password' className='form-control indie-flower-regular' onChange={(e)=>setPassword(e.target.value)}/><br />
+                <input type='phone'placeholder='📱Enter Phone Number'className='form-control indie-flower-regular' onChange={(e)=>setPhone(e.target.value)}/><br />
                 <button type='submit' className='btn btn-primary w-100'>Sign up</button> <br />
                 <p>Already have an account?  <Link to="/signin">Signin</Link></p>
             </form>

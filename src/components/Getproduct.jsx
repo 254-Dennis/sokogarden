@@ -17,6 +17,9 @@ const Getproduct = () => {
         setLoading("")
         
       } catch (error) {
+        setError(error.message)
+        setLoading("");
+        
         
       }
     }

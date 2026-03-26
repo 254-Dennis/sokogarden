@@ -26,6 +26,9 @@ const Addproduct = () => {
         setSuccess(response.data.message)
         setLoading("")
     } catch (error) {
+      setError(error.message)
+        setLoading("");
+        
     }
     }
   return (
@@ -41,7 +44,7 @@ const Addproduct = () => {
             <form action="" onSubmit={handlesubmit}>
                 <input type="text" placeholder='Enter product Name' className='form-control indie-flower-regular' onChange={(e)=>setProduct_Name(e.target.value)}/> <br />
                 <textarea name="" id="" className='form-control indie-flower-regular' placeholder='Enter product description' onChange={(e)=>setProduct_Description(e.target.value)}></textarea><br />
-                <input type="number" placeholder='Enter product cost' className='form-control indie-flower-regular' onChange={(e)=>setProduct_Cost(e.target.value)}/><br />
+                <input type="number" placeholder='🤑Enter product cost' className='form-control indie-flower-regular' onChange={(e)=>setProduct_Cost(e.target.value)}/><br />
                 <input type="file" accept="image/*" className='form-control' onChange={(e)=>setProduct_Photo(e.target.files[0])} /><br />
                 <button type='submit' className='btn btn-danger w-100' indie-flower-regular>Add Product</button>
 
