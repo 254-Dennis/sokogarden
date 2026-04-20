@@ -10,13 +10,14 @@ import Signin from './components/Signin';
 import Addproduct from './components/Addproduct';
 import Getproduct from './components/Getproduct';
 import Makepayment from './components/Makepayment';
+import Footer from './components/Footer';
 function App() {
   return (
     <BrowserRouter>
 
       <div className="App">
         <header className="App-header indie-flower-regular">
-          <h1>Welcome to electronic shop</h1>
+          <h1>Jounior electronic shop</h1>
         </header>
         <nav>
           <Link to="/signup" className='btn btn-primary m-2 indie-flower-regular'>🙋‍♂️Sign up</Link>
@@ -35,6 +36,8 @@ function App() {
           
 
         </Routes>
+
+        <Footer/>
       </div>
     </BrowserRouter>
   );

@@ -51,7 +51,7 @@ const Addproduct = () => {
 
             </form>
         </div>
-
+        
     </div>
     </div>
   )
