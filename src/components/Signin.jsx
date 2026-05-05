@@ -10,6 +10,7 @@ const Signin = () => {
     const[loading,setLoading]=useState("")
     const[success,setSuccess]=useState("")
     const[error,setError]=useState("")
+    const [strength, setStrength]=useState("");
     // fuction to handle submit 
     const handlesubmit=async(e)=>{
         e.preventDefault()
@@ -28,6 +29,15 @@ const Signin = () => {
         }
         
     }
+    const checkPasswordStrength = (password)=>{
+      if(password.length< 4){
+        setStrength("weak");
+      }else if(password.length<8){
+        setStrength("medium");
+      }else{
+        setStrength('strong');
+      }
+    };
 
   return (
     <div className='full-height'>
@@ -40,7 +50,21 @@ const Signin = () => {
         <h2 className='text-danger'>{error}</h2>
         <form action="" onSubmit={handlesubmit}>
             <input type="email" placeholder='📧Enter Email'className='form-control indie-flower-regular'onChange={(e)=>setEmail(e.target.value)}/><br />
-            <input type="password" placeholder='🔒Enter password'className='form-control indie-flower-regular' onChange={(e)=>setPassword(e.target.value)} /><br />
+            <input type="password" placeholder='🔒Enter password'className='form-control indie-flower-regular'  onChange={(e)=>{setPassword(e.target.value); checkPasswordStrength(e.target.value); }} /><br />
+            {password && (
+                  <p
+                  style={{
+                    color:
+                    strength ==="weak"
+                    ? "red"
+                    :strength ==="medium"
+                    ?"orange"
+                    :"yellow",
+                  }}
+                  >
+                    password Strength: {strength}
+                  </p>
+                )}
             <button type='submit'className='btn btn-primary w-100'>signin</button>
             <p>Don't have an account?<Link to="/Signup">Signup</Link></p>
         </form>

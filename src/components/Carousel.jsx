@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Carousel = () => {
-  return (
-          <section class="row">
+    return (
+        <section class="row">
             <div class="col-md-12">
                 {/* <!-- a division with carousel content  --> */}
                 <div class="carousel slide" data-bs-ride="carousel" id="mycarousel">
@@ -10,19 +10,19 @@ const Carousel = () => {
                     <div class="carousel-inner">
                         {/* <!-- division with image one  --> */}
                         <div class="carousel-item active">
-                            <img src="/images/images (5).jpeg" alt="slide1" style={{height:"300px", width:"1000px"}}/>
+                            <img src="/images/image21.png" alt="slide1" style={{ height: "300px", width: "1000px" }} />
                         </div>
                         {/* <!-- division with image two  --> */}
                         <div class="carousel-item">
-                            <img src="/images/download (2).jpeg" alt="slide2" style={{height:"300px", width:"1000px"}}/>
+                            <img src="/images/images34.png" alt="slide2" style={{ height: "300px", width: "1000px" }} />
                         </div>
                         {/* <!-- division with image three  --> */}
                         <div class="carousel-item">
-                            <img src="/images/download.jpeg" alt="slide3" style={{height:"300px", width:"1000px"}}/>
+                            <img src="/images/images40.png" alt="slide3" style={{ height: "300px", width: "1000px" }} />
                         </div>
                         {/* <!-- division with image four  --> */}
                         <div class="carousel-item">
-                            <img src="/images/images (2).jpeg" alt="slide4" style={{height:"300px", width:"1000px"}}/>
+                            <img src="/images/images50.png" alt="slide4" style={{ height: "300px", width: "1000px" }} />
                         </div>
                     </div>
                     {/* <!-- previous control  --> */}
@@ -36,7 +36,7 @@ const Carousel = () => {
                 </div>
             </div>
         </section>
-  )
+    )
 }
 
 export default Carousel

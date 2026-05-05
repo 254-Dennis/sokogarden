@@ -6,13 +6,13 @@ const Footer = () => {
             <section class="row bg-warning p-4">
                 {/* <!-- child 1  -->  */}
                 <div class="col-md-4 text-white">
-                    <h2 class="text-center">About us</h2>
-                    <p>We offer our delivery every where in the country in 24 hours without wasting time.Our offers will
+                    <h2 class="text-center bg-success">About us</h2>
+                    <p class="text-dark">We offer our delivery every where in the country in 24 hours without wasting time.Our offers will
                         start today nation wide.</p>
                 </div>
                 {/* <!-- child 2  -->  */}
                 <div class="col-md-4">
-                    <h2 class="text-center text-white">Contact us</h2>
+                    <h2 class="text-center text-white bg-success">Contact us</h2>
                     <form action="">
                         <input type="email" placeholder="enter your email" class="form-control" /><br /><br />
                         <textarea name="" cols="10" rows="7" id="" class="form-control"
@@ -22,7 +22,7 @@ const Footer = () => {
                 </div>
                 {/* <!-- child 3  -->  */}
                 <div class="col-md-4">
-                    <h2 class="text-center text-white">Stay conected</h2>
+                    <h2 class="text-center text-white bg-success">Stay conected</h2>
                     <a href="">
                         <img src="images/fb.png" alt="fb" />
                     </a>
