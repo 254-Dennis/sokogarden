@@ -11,6 +11,8 @@ import Addproduct from './components/Addproduct';
 import Getproduct from './components/Getproduct';
 import Makepayment from './components/Makepayment';
 import Footer from './components/Footer';
+import Navbar from './components/navbar';
+import Cart from './components/Cart';
 function App() {
   return (
     <BrowserRouter>
@@ -23,17 +25,14 @@ function App() {
           <Link to="/signup" className='btn btn-primary m-2 indie-flower-regular'>🙋‍♂️Sign up</Link>
           <Link to="/signin" className='btn btn-primary m-2 indie-flower-regular'>🙎Sign in</Link>
           <Link to="/addproduct" className='btn btn-info m-2 indie-flower-regular'>🖥️add product</Link>
-          <Link to="/" className='btn btn-info m-2 indie-flower-regular'>💻get product</Link>
-          
-
-        </nav>
+          <Link to="/" className='btn btn-info m-2 indie-flower-regular'>💻get product</Link>        </nav>
         <Routes>
           <Route path='/' element={<Getproduct />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/addproduct' element={<Addproduct />} />
           <Route path='/makepayment' element={<Makepayment />} />
-          
+          <Route path='/cart' element={<Cart />} />
 
         </Routes>
 

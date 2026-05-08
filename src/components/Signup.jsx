@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React,{useState}from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Signup = () => {
     // declare our state here 
@@ -8,6 +8,7 @@ const Signup = () => {
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
     const [phone,setPhone]=useState("")
+    const navigate = useNavigate()
     
     // three states for posting data
     const [loading,setLoading]=useState("") 
@@ -28,6 +29,7 @@ const Signup = () => {
         const response=await axios.post("http://denniskifaru.alwaysdata.net/api/signup",formdata)
         setSuccess(response.data.massage)
         setLoading("")
+        navigate("/")
       } catch (error) {
         setError(error.message)
         setLoading("");
@@ -54,7 +56,7 @@ const Signup = () => {
             <h2 className='text-success'>{success}</h2>
             <h2 className='text-danger'>{error}</h2>
 
-            <form action=""  onSubmit={handlesubmit}>
+            <form onSubmit={handlesubmit}>
                 <input type='text' placeholder='👤Enter Username' className='form-control indie-flower-regular' onChange={(e)=>setUsername(e.target.value)}/><br />
                 <input type='email' placeholder='📧Enter Email' className='form-control indie-flower-regular' onChange={(e)=>setEmail(e.target.value)}/><br />
                 <input type='password'placeholder='🔒Enter Password' className='form-control indie-flower-regular' onChange={(e)=>{setPassword(e.target.value); checkPasswordStrength(e.target.value); }}/><br />

@@ -41,7 +41,7 @@ const Makepayment = () => {
             <h2 className='text-success'>{loading}</h2>
             <h2 className='text-warning'>{success}</h2>
             <h2 className='text-danger'>{error}</h2>
-            <form action="" onSubmit={handlesubmit}>
+            <form onSubmit={handlesubmit}>
                 <input type="number" className='form-control'
                 placeholder='Enter phone 254xxxxxxxx' onChange={(e)=>setPhone(e.target.value)}/> <br />
                 <button type='submit' className='btn btn-success w-100' indie-flower-regular>Make payment</button>
